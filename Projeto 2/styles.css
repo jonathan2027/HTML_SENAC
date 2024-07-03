@@ -1,0 +1,7 @@
+.fundo{
+
+    background-image: url(imagem/Yoshi.png);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
