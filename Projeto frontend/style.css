@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background-color: aqua;
+}
+
+label#nome {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+label#email {
+    margin-top: 30px;
+}
+
+fieldset {
+background-color: aliceblue;
+margin: auto;
+margin-top: 15%;
+padding: 20px;
+height: 300px;
+border-radius: 20px;
+}
