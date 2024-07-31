@@ -1,0 +1,23 @@
+<script>
+let nome = prompt('Digite o nome do funcionario');
+console.log(nome)
+
+let salario = parseFloat (prompt('Digite o salario'))
+console.log(salario)
+
+let aumento = parseFloat (prompt('Digite a porcetagem do aumento'))
+console.log(aumento)
+
+let valorDoAumento = salario/100*aumento
+console.log = valorDoAumento
+
+document.write('<b> Funcionario </b>' , nome '<br>')
+document.write('<b> Salario </b>' , salario '<br>')
+document.write('<b> aumento </b>' , aumento '<br>')
+document.write('<b> Valor do aumento </b>' , valorDoAumento, '<br>')
+document.write('<b> Novo salario </b>' , (salario + valorDoAumento))
+
+
+
+
+</script>
