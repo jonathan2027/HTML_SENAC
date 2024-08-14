@@ -1,0 +1,22 @@
+<script>
+/*
+1. Crie um programa que armazene a senha Senac
+2. Solicite ao usuario que digite a senha correta
+3. Enquanto a senha digitada pelo não for Senac, o programa devera continuar em execução solicitando a senha correta.
+
+*/
+
+let senha = 'Senac';
+let senhaDigitada = prompt('Digite a senha correta');
+
+while(senhaDigitada !== senha){
+    alert('Senha incorreta, tente novamente!');
+    senhaDigitada = prompt('Digite a senha novamente');
+}
+
+document.write('<h1>Acesso permitido</h1>')
+
+
+
+
+</script>
