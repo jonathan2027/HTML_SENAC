@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio 04</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+ 
+        #relogio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+ 
+        #relogio .data {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+ 
+        #relogio .data span {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+ 
+        #relogio .horario {
+            display: flex;
+            align-items: center;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #333;
+        }
+ 
+        #relogio .horario div {
+            background: #eee;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 0 5px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+ 
+        #relogio .horario span {
+            font-size: 4rem;
+            color: #666;
+        }
+ 
+        #relogio .horario #separador {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="relogio">
+        <div class="data" id="data">
+            <span id="dia"></span>
+            <span id="mes-ano"></span>
+        </div>
+        <div class="horario">
+            <div id="horas"></div>
+            <span id="separador">:</span>
+            <div id="minutos"></div>
+            <span id="separador">:</span>
+            <div id="segundos"></div>
+        </div>
+    </div>
+ 
+    <script>
+        function atualizarRelogio() {
+            const horas = document.getElementById('horas');
+            const minutos = document.getElementById('minutos');
+            const segundos = document.getElementById('segundos');
+            const dia = document.getElementById('dia');
+            const mesAno = document.getElementById('mes-ano');
+ 
+            const tempo = new Date();
+            let h = tempo.getHours();
+            let m = tempo.getMinutes();
+            let s = tempo.getSeconds();
+            const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+            const mesesDoAno = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+            let d = tempo.getDate();
+            let mo = tempo.getMonth();
+            let a = tempo.getFullYear();
+ 
+            if (h < 10) h = '0' + h;
+            if (m < 10) m = '0' + m;
+            if (s < 10) s = '0' + s;
+            if (d < 10) d = '0' + d;
+ 
+            horas.textContent = h;
+            minutos.textContent = m;
+            segundos.textContent = s;
+            dia.textContent = `${diasDaSemana[tempo.getDay()]}, ${d}`;
+            mesAno.textContent = `de ${mesesDoAno[mo]} de ${a}`;
+        }
+ 
+        setInterval(atualizarRelogio, 1000);
+        atualizarRelogio(); // Atualizar imediatamente ao carregar a página
+    </script>
+</body>
+ 
+</html>
