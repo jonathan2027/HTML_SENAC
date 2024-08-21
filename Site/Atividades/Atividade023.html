@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac alterar cor de fundo</title>
+</head>
+ 
+<body>
+    <style>
+        #caixa {
+            width: 300px;
+            height: 200px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    <script>
+        function alterarCor() {
+            let caixa = prompt('Digite uma cor');
+            let div = document.getElementById('caixa');
+            div.style.backgroundColor = caixa;
+ 
+ 
+        }
+ 
+ 
+    </script>
+ 
+ 
+    <div id="caixa" onclick="alterarCor();">
+        click na div para alterar a cor
+    </div>
